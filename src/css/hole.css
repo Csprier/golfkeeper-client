@@ -1,0 +1,45 @@
+.hole-container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid gray;
+  margin: 0px 0px 2px 0px;
+  padding: 0px 0px 0px 0px;
+  background-color: rgb(149, 175, 149);
+}
+
+.hole-container h3 {
+  display: inline-block;
+  margin: 0px 0px 0px 0px;
+  padding: 5px 0px 0px 5px;
+  color: white;
+}
+
+.score-display {
+  display: inline-block;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 10px 0px 0px;
+}
+
+.score-display p, button {
+  position: relative;
+  display: inline-block;
+}
+
+.score-display p {
+  padding: 0px 25px 0px 0px;
+  color: white;
+  font-weight: bold;
+}
+
+.score-button {
+  width: 40px;
+  height: 40px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 2px;
+  background-color: green;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
