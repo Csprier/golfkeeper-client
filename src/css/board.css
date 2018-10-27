@@ -1,12 +1,17 @@
 .board-container {
-  width: 90%;
+  width: 50%;
   height: auto;
   margin: 0px auto;
+  margin-top: 5px;
   padding: 0px 0px 0px 0px;
+  background-color: white;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .board-container h2 {
   margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
-  text-align: center;
+  padding: 0px 0px 5px 10px;
 }

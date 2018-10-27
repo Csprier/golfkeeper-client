@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   border: 1px solid gray;
-  margin: 0px 0px 2px 0px;
+  margin: 0px 2px 2px 2px;
   padding: 0px 0px 0px 0px;
   background-color: rgb(149, 175, 149);
 }
@@ -26,9 +26,11 @@
 }
 
 .score-display p {
-  padding: 0px 25px 0px 0px;
+  margin: 0px 25px 0px 0px;
+  padding: 5px 10px;
   color: white;
   font-weight: bold;
+  border: 1px solid white;
 }
 
 .score-button {
