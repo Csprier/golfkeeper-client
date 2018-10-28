@@ -10,14 +10,14 @@ export const removeStrokeToTotal = () => ({
 });
 // ================================================================ \\
 export const ADD_STROKE_TO_HOLE = 'ADD_STROKE_TO_HOLE';
-export const addStrokeToHole = (score) => ({
+export const addStrokeToHole = (hole) => ({
   type: ADD_STROKE_TO_HOLE,
-  score
+  hole
 });
 // ================================================================ \\
 export const REMOVE_STROKE_FROM_HOLE = 'REMOVE_STROKE_FROM_HOLE';
-export const removeStrokeFromHole = (score) => ({
+export const removeStrokeFromHole = (hole) => ({
   type: REMOVE_STROKE_FROM_HOLE,
-  score
+  hole
 });
 // ================================================================ \\

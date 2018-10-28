@@ -93,20 +93,36 @@ export default (state = initialState, action) => {
       total: state.total - 1
     })
   }
-
-  /**
-   * THE NEXT TWO ACTIONS ARE NOT UPDATING THE CORRECT PART OF THE STATE.
-   * They need to update the course.specific-hole.score
-   */
+  
   if (action.type === ADD_STROKE_TO_HOLE) {
+    const incrementScore = (course, hole) => { 
+    const courseCopy = course.slice(); 
+      for (let i=0; i<courseCopy.length; i++){ 
+        if (courseCopy[i].hole === hole){ 
+          courseCopy[i].score += 1; 
+        } 
+      } 
+      return courseCopy; 
+    };
+
     return Object.assign({}, state, {
-      ...state      
+      course: incrementScore(state.course, action.hole)
     });
   }
 
   if (action.type === REMOVE_STROKE_FROM_HOLE) {
+    const decrementScore = (course, hole) => { 
+    const courseCopy = course.slice(); 
+      for (let i=0; i<courseCopy.length; i++){ 
+        if (courseCopy[i].hole === hole){ 
+          courseCopy[i].score -= 1; 
+        } 
+      } 
+      return courseCopy; 
+    };
+
     return Object.assign({}, state, {
-      ...state
+      course: decrementScore(state.course, action.hole)
     });
   }
   return state;

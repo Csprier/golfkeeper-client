@@ -5,10 +5,6 @@ import Hole from './hole';
 import '../css/board.css';
 
 class Board extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className='board-container'>

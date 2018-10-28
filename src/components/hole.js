@@ -5,20 +5,18 @@ import '../css/hole.css';
 
 
 class Hole extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   addScoreToTotal = () => {
     console.log('One stroke added.');
     this.props.dispatch(addStrokeToTotal());
-    this.props.dispatch(addStrokeToHole(this.props.score));
+    this.props.dispatch(addStrokeToHole(this.props.hole));
+    console.log(this.props.hole, this.props.score);
   }
 
   subScoreToTotal = () => {
     console.log('One stroke deducted.');
     this.props.dispatch(removeStrokeToTotal());
-    this.props.dispatch(removeStrokeFromHole(this.props.score));
+    this.props.dispatch(removeStrokeFromHole(this.props.hole));
+    console.log(this.props.hole, this.props.score);
   }
 
   render() {
