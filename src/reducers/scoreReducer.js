@@ -1,4 +1,4 @@
-import { ADD_STROKE_TO_TOTAL, REMOVE_STROKE_TO_TOTAL } from '../actions/scoreActions';
+import { ADD_STROKE_TO_TOTAL, REMOVE_STROKE_TO_TOTAL, ADD_STROKE_TO_HOLE, REMOVE_STROKE_FROM_HOLE } from '../actions/scoreActions';
 
 export const initialState = {
   course: [
@@ -78,17 +78,36 @@ export const initialState = {
   total: 0
 }
 
+// ================================================================ \\
 export default (state = initialState, action) => {
   if (action.type === ADD_STROKE_TO_TOTAL) {
     return Object.assign({}, state, {
+      ...state,
       total: state.total + 1
     })
   }
 
   if (action.type === REMOVE_STROKE_TO_TOTAL) {
     return Object.assign({}, state, {
+      ...state,
       total: state.total - 1
     })
+  }
+
+  /**
+   * THE NEXT TWO ACTIONS ARE NOT UPDATING THE CORRECT PART OF THE STATE.
+   * They need to update the course.specific-hole.score
+   */
+  if (action.type === ADD_STROKE_TO_HOLE) {
+    return Object.assign({}, state, {
+      ...state      
+    });
+  }
+
+  if (action.type === REMOVE_STROKE_FROM_HOLE) {
+    return Object.assign({}, state, {
+      ...state
+    });
   }
   return state;
 }
