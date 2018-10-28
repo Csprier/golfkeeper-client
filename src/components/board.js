@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
 import Hole from './hole';
 
 import '../css/board.css';
@@ -7,19 +7,22 @@ import '../css/board.css';
 class Board extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      course: [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ]
-    }
   }
 
   render() {
     return (
       <div className='board-container'>
         <h2>Score Board</h2>
-        {this.state.course.map((hole, i) => <Hole key={i} hole={hole}/>)}
+        {this.props.course.map((hole, i) => <Hole key={i} hole={hole.hole} score={hole.score}/>)}
+        <span>Total Score: {this.props.total}</span>
       </div>
     );
   }
 }
 
-export default Board;
+const mapStateToProps = state => ({
+  course: state.course,
+  total: state.total
+});
+
+export default connect(mapStateToProps)(Board);
