@@ -21,3 +21,8 @@ export const removeStrokeFromHole = (hole) => ({
   hole
 });
 // ================================================================ \\
+export const ADD_HANDICAP = 'ADD_HANDICAP';
+export const addHandicap = (handicap) => ({
+  type: ADD_HANDICAP,
+  handicap
+});

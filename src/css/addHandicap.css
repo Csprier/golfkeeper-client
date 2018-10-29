@@ -1,0 +1,17 @@
+.handicap-module {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 50px;
+  margin: 5px 0px 0px 5px;
+  color: white;
+}
+
+.handicap-module-input {
+  width: 50%;
+}
+
+.handicap-module-button {
+  color: white;
+  /* border: 1px solid white; */
+}

@@ -1,4 +1,4 @@
-import { ADD_STROKE_TO_TOTAL, REMOVE_STROKE_TO_TOTAL, ADD_STROKE_TO_HOLE, REMOVE_STROKE_FROM_HOLE } from '../actions/scoreActions';
+import { ADD_STROKE_TO_TOTAL, REMOVE_STROKE_TO_TOTAL, ADD_STROKE_TO_HOLE, REMOVE_STROKE_FROM_HOLE, ADD_HANDICAP } from '../actions/scoreActions';
 
 export const initialState = {
   course: [
@@ -75,7 +75,8 @@ export const initialState = {
       score: 0
     }
   ],
-  total: 0
+  total: 0,
+  handicap: 0
 }
 
 // ================================================================ \\
@@ -87,6 +88,7 @@ export default (state = initialState, action) => {
     })
   }
 
+// ================================================================ \\
   if (action.type === REMOVE_STROKE_TO_TOTAL) {
     return Object.assign({}, state, {
       ...state,
@@ -94,6 +96,7 @@ export default (state = initialState, action) => {
     })
   }
 
+// ================================================================ \\
   if (action.type === ADD_STROKE_TO_HOLE) {
     const incrementScore = (course, hole) => { 
       const courseCopy = course.slice(); 
@@ -110,6 +113,7 @@ export default (state = initialState, action) => {
     });
   }
 
+// ================================================================ \\
   if (action.type === REMOVE_STROKE_FROM_HOLE) {
     const decrementScore = (course, hole) => { 
       const courseCopy = course.slice(); 
@@ -125,5 +129,15 @@ export default (state = initialState, action) => {
       course: decrementScore(state.course, action.hole)
     });
   }
+
+// ================================================================ \\
+  if (action.type === ADD_HANDICAP) {
+    return Object.assign({}, state, {
+      ...state,
+      handicap: action.handicap
+    });
+  }
+
+// ================================================================ \\
   return state;
 }

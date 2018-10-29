@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Hole from './hole';
 
 import '../css/board.css';
+import AddHandicap from './addHandicap';
 
 class Board extends Component {
   render() {
@@ -10,6 +11,7 @@ class Board extends Component {
       <div className='board-container'>
         <h2>Score Board</h2>
         {this.props.course.map((hole, i) => <Hole key={i} hole={hole.hole} score={hole.score} />)}
+        <AddHandicap total={this.props.total}/>
         <span className="total-score">Total Score: {this.props.total}</span>
       </div>
     );
