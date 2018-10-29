@@ -12,13 +12,7 @@ class Board extends Component {
         <h2>Score Board</h2>
         {this.props.course.map((hole, i) => <Hole key={i} hole={hole.hole} score={hole.score} />)}
         <AddHandicap total={this.props.total}/>
-        {/* <span className="total-score">Total Score: {this.props.total}</span> */}
         <span className="total-score">Total Score with handicap: {this.props.total}</span>
-        {/* {
-          (this.props.handicap) 
-            ? <span className="total-score">Total Score with handicap: {this.props.total}</span> 
-            : <span className="total-score">Total Score: {this.props.total}</span>
-        } */}
       </div>
     );
   }
