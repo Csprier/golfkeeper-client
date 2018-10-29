@@ -2,16 +2,16 @@
   display: flex;
   justify-content: space-between;
   border: 1px solid gray;
-  margin: 0px 2px 2px 2px;
+  background-color: white;
+  margin: 0px;
   padding: 0px 0px 0px 0px;
-  background-color: rgb(149, 175, 149);
+  color: black;
 }
 
 .hole-container h3 {
   display: inline-block;
   margin: 0px 0px 0px 0px;
   padding: 5px 0px 0px 5px;
-  color: white;
 }
 
 .score-display {
@@ -28,14 +28,13 @@
 .score-display p {
   margin: 0px 25px 0px 0px;
   padding: 5px 10px;
-  color: white;
   font-weight: bold;
   border: 1px solid white;
 }
 
 .score-button {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
   border: 1px solid rgb(224, 224, 224);

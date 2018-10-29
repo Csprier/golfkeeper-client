@@ -93,11 +93,11 @@ export default (state = initialState, action) => {
       total: state.total - 1
     })
   }
-  
+
   if (action.type === ADD_STROKE_TO_HOLE) {
     const incrementScore = (course, hole) => { 
-    const courseCopy = course.slice(); 
-      for (let i=0; i<courseCopy.length; i++){ 
+      const courseCopy = course.slice(); 
+      for (let i = 0; i < courseCopy.length; i++){ 
         if (courseCopy[i].hole === hole){ 
           courseCopy[i].score += 1; 
         } 
@@ -112,8 +112,8 @@ export default (state = initialState, action) => {
 
   if (action.type === REMOVE_STROKE_FROM_HOLE) {
     const decrementScore = (course, hole) => { 
-    const courseCopy = course.slice(); 
-      for (let i=0; i<courseCopy.length; i++){ 
+      const courseCopy = course.slice(); 
+      for (let i = 0; i < courseCopy.length; i++){ 
         if (courseCopy[i].hole === hole){ 
           courseCopy[i].score -= 1; 
         } 

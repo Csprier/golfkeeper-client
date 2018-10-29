@@ -1,10 +1,10 @@
 .board-container {
-  width: 50%;
+  width: 98%;
   height: auto;
   margin: 0px auto;
-  margin-top: 5px;
+  margin-top: 2px;
   padding: 0px 0px 0px 0px;
-  background-color: white;
+  background-color: #000000c7;
   border-left: 2px solid black;
   border-right: 2px solid black;
   border-top: 1px solid black;
@@ -12,6 +12,14 @@
 }
 
 .board-container h2 {
+  width: 98%;
   margin: 0px 0px 0px 0px;
-  padding: 0px 0px 5px 10px;
+  padding: 0px 0px 3px 3px;
+  color: white;
+}
+
+.total-score {
+  padding: 5px 5px 5px 5px;
+  font-weight: bold;
+  color: white;
 }
