@@ -3,15 +3,18 @@
   flex-direction: column;
   width: 50%;
   height: 50px;
-  margin: 5px 0px 0px 5px;
+  margin: 5px 0px 30px 0px;
+  padding: 0px 0px 0px 5px;
   color: white;
 }
 
 .handicap-module-input {
+  display: flex;
   width: 50%;
+  margin: 5px 0px 5px 0px;
 }
 
 .handicap-module-button {
-  color: white;
-  /* border: 1px solid white; */
+  color: green;
+  border: 1px solid white;
 }

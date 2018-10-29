@@ -35,7 +35,7 @@ class AddHandicap extends Component {
       <div className="handicap-module">
         <form onSubmit={(e) => this.submitHandicap(e)}>
           <label>
-            Add Handicap: 
+            Handicap: {this.state.handicapValue}
             <input 
               className="handicap-module-input" 
               placeholder="Submit a handicap" 
