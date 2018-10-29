@@ -1,4 +1,11 @@
-import { ADD_STROKE_TO_TOTAL, REMOVE_STROKE_TO_TOTAL, ADD_STROKE_TO_HOLE, REMOVE_STROKE_FROM_HOLE, ADD_HANDICAP } from '../actions/scoreActions';
+import { 
+  ADD_STROKE_TO_TOTAL, 
+  REMOVE_STROKE_TO_TOTAL, 
+  ADD_STROKE_TO_HOLE, 
+  REMOVE_STROKE_FROM_HOLE, 
+  ADD_HANDICAP, 
+  ADD_HANDICAP_TO_TOTAL_SCORE 
+} from '../actions/scoreActions';
 
 export const initialState = {
   course: [
@@ -137,6 +144,20 @@ export default (state = initialState, action) => {
       handicap: action.handicap
     });
   }
+
+// ================================================================ \\
+if (action.type === ADD_HANDICAP_TO_TOTAL_SCORE) {
+  const modifiyScore = (score, handicap) => {
+    let modifiedTotal = score - handicap;
+    
+    return modifiedTotal;
+  };
+
+  return Object.assign({}, state, {
+    ...state,
+    total: modifiyScore(state.total, state.handicap)
+  });
+}
 
 // ================================================================ \\
   return state;

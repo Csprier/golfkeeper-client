@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addHandicap } from '../actions/scoreActions';
+import { addHandicap, addHandicapToTotalScore } from '../actions/scoreActions';
 import '../css/addHandicap.css';
 
 
@@ -26,6 +26,7 @@ class AddHandicap extends Component {
     e.preventDefault();
     console.log('Submitting Handicap: ', this.state.handicapValue);
     this.props.dispatch(addHandicap(parseInt(this.state.handicapValue)));
+    this.props.dispatch(addHandicapToTotalScore(this.props.total, parseInt(this.state.handicapValue)));
   }
 
   render() {
@@ -57,4 +58,8 @@ class AddHandicap extends Component {
   }
 }
 
-export default connect()(AddHandicap);
+const mapStateToProps = (state) => ({
+  total: state.total
+});
+
+export default connect(mapStateToProps)(AddHandicap);

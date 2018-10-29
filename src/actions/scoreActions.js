@@ -26,3 +26,9 @@ export const addHandicap = (handicap) => ({
   type: ADD_HANDICAP,
   handicap
 });
+
+export const ADD_HANDICAP_TO_TOTAL_SCORE = 'ADD_HANDICAP_TO_TOTAL_SCORE'
+export const addHandicapToTotalScore = (handicap) => ({
+  type: ADD_HANDICAP_TO_TOTAL_SCORE,
+  handicap
+})
