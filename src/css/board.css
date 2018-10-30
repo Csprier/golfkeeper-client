@@ -4,7 +4,8 @@
   margin: 0px auto;
   margin-top: 2px;
   padding: 0px 0px 0px 0px;
-  background-color: #000000c7;
+  /* background-color: #000000c7; */
+  background-color: black;
   border-left: 2px solid black;
   border-right: 2px solid black;
   border-top: 1px solid black;
